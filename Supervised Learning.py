@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 # %matplotlib inline
 import scipy.stats as stats
 
+
 from google.colab import files
 uploaded = files.upload()
 
@@ -165,7 +166,7 @@ df_clean_cp
 df_clean_cu = pd.concat([df_clean_ci, df_clean_cp])
 df_clean_cu
 
-df_clean_cut = pd.get_dummies(df_clean_cu, columns=['cut'], drop_first= True) #ВОТ ЭТО!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+df_clean_cut = pd.get_dummies(df_clean_cu, columns=['cut'], drop_first= True) #this one is right
 df_clean_cut
 
 df_clean_d = df_clean.loc[df_clean['color'] == "D"]
@@ -177,7 +178,7 @@ df_clean_e
 df_clean_co = pd.concat([df_clean_d, df_clean_e])
 df_clean_co
 
-df_clean_col = pd.get_dummies(df_clean_co, columns=['color'], drop_first= True) #ВОТ ЭТО!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+df_clean_col = pd.get_dummies(df_clean_co, columns=['color'], drop_first= True) #this one is right
 df_clean_col
 
 df_clean_cif = df_clean.loc[df_clean['clarity'] == "IF"]
@@ -189,7 +190,7 @@ df_clean_cvv
 df_clean_cl = pd.concat([df_clean_cif, df_clean_cvv])
 df_clean_cl
 
-df_clean_cla = pd.get_dummies(df_clean_cl, columns=['clarity'], drop_first= True) #ВОТ ЭТО!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+df_clean_cla = pd.get_dummies(df_clean_cl, columns=['clarity'], drop_first= True) #this one is right
 df_clean_cla
 
 """***KNN***"""
